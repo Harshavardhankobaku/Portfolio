@@ -1,0 +1,314 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #fff;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Layout */
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Typography */
+header h1 {
+  font-size: 2.5em;
+  color: #fff;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #ccc;
+  margin-top: 5px;
+}
+
+h2 {
+  color: #ff4c4c;
+  margin-bottom: 10px;
+}
+
+section {
+  margin-top: 30px;
+}
+
+.project-card {
+  background-color: #1c1c1c;
+  padding: 15px;
+  border-left: 4px solid #ff4c4c;
+  margin-bottom: 15px;
+}
+
+.project-card a {
+  color: #ff4c4c;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Links */
+a {
+  color: #ff4c4c;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #888;
+  text-align: center;
+}
+
+/* Resume Button */
+.resume-btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: transparent;
+  color: #00ffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+  border: 2px solid transparent;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.resume-btn::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00ffff, #ff004f, #00ffff, #ff004f);
+  background-size: 300% 300%;
+  animation: glowMove 3s linear infinite;
+  z-index: -1;
+  border-radius: 5px;
+  filter: blur(4px);
+}
+
+.resume-btn:hover {
+  background-color: rgba(0, 255, 255, 0.2);
+  color: #fff;
+}
+
+@keyframes glowMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 1s; }
+.delay-3 { animation-delay: 1.5s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Project GitHub link hover */
+.project-card a {
+  display: inline-block;
+  color: #00ffff;
+  font-weight: bold;
+  margin-top: 10px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.project-card a:hover {
+  color: #ff004f;
+  border-bottom: 2px solid #ff004f;
+  text-shadow: 0 0 5px #ff004f;
+}
+
+/* Resume button hover */
+.resume-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.resume-btn:hover {
+  background-color: #00ffff;
+  color: #0d0d0d;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+/* Project GitHub link hover - with scale */
+.project-card a {
+  display: inline-block;
+  color: #00ffff;
+  font-weight: bold;
+  margin-top: 10px;
+  border-bottom: 2px solid transparent;
+  transition: transform 0.3s ease, color 0.3s ease, border 0.3s ease, text-shadow 0.3s ease;
+}
+
+.project-card a:hover {
+  color: #ff004f;
+  border-bottom: 2px solid #ff004f;
+  text-shadow: 0 0 5px #ff004f;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Resume button hover - with scale */
+.resume-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.resume-btn:hover {
+  background-color: #00ffff;
+  color: #0d0d0d;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  transform: translateY(-4px) scale(1.05);
+}
+/* General button style with hover motion */
+button, .resume-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover, .resume-btn:hover {
+  background-color: #00ffff;
+  color: #0d0d0d;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* Project GitHub link hover with animation */
+.project-card a {
+  display: inline-block;
+  color: #00ffff;
+  font-weight: bold;
+  margin-top: 10px;
+  border-bottom: 2px solid transparent;
+  transition: transform 0.3s ease, color 0.3s ease, border 0.3s ease, text-shadow 0.3s ease;
+}
+
+.project-card a:hover {
+  color: #ff004f;
+  border-bottom: 2px solid #ff004f;
+  text-shadow: 0 0 5px #ff004f;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Hover motion effect on project cards */
+.project-card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #333;
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff20;
+}
+/* Skills section container */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Individual skill cards */
+.skill-card {
+  background-color: #1a1a1a;
+  color: #00ffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: 1px solid #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animation */
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff40;
+}
+/* Hover effect for contact links */
+#contact p {
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+#contact p:hover {
+  transform: translateY(-4px) scale(1.03);
+  text-shadow: 0 0 8px #00ffff;
+}
+
+/* Optional: make the anchor tags glow too */
+#contact a {
+  color: #00ffff;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+#contact a:hover {
+  color: #ff004f;
+  text-shadow: 0 0 5px #ff004f;
+  transform: translateY(-2px) scale(1.02);
+}
